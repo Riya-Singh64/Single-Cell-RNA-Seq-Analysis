@@ -26,7 +26,7 @@ GSM6998337, GSM6998340
 Data format:
 10x Genomics filtered_feature_bc_matrix (.h5)
 
-3. Tools Used
+3. Tools Used:
 Python
 Scanpy
 Anndata
@@ -35,7 +35,7 @@ NumPy
 Matplotlib
 Main tool: Scanpy - Python toolkit for single cell analysis
 
-4. scRNA-seq Analysis Workflow
+4. scRNA-seq Analysis Workflow:
 1. Data Loading
 2. Quality Control
 3. Normalization
@@ -49,7 +49,7 @@ Main tool: Scanpy - Python toolkit for single cell analysis
 Algorithm used: Leiden clustering algorithm
 
 Cell Clustering using Leiden Algorithm:
-.Cell clustering is a key step in single-cell RNA sequencing analysis. 
+Cell clustering is a key step in single-cell RNA sequencing analysis. 
 After dimensionality reduction and graph construction, clustering algorithms 
 are used to group cells with similar gene expression profiles.
 
@@ -58,7 +58,6 @@ The algorithm works by optimizing modularity in a graph representation
 of the data and detecting communities of cells.
 
 Steps involved:
-
 1. Construction of a k-nearest neighbor graph
 2. Identification of communities using the Leiden algorithm
 3. Assignment of cluster labels to each cell
@@ -67,18 +66,18 @@ CODE:
 sc.pp.neighbors(adata)
 sc.tl.leiden(adata)
 
-5. Visualization
+5. Visualization:
 UMAP was used to visualize the clusters in two dimensions.
 Each point represents a single cell, and cells with similar gene expression 
 profiles appear close together.
 
-6. Result
+6. Result:
 The analysis successfully identified distinct cell clusters within the dataset.
 Differential gene expression analysis revealed marker genes associated with 
 each cluster. These marker genes help characterize specific cell populations 
 present in the tumor microenvironment.
 
-7. Conclusion
+7. Conclusion:
 This project demonstrates a basic single-cell RNA sequencing analysis pipeline 
 using Scanpy. The workflow includes quality control, normalization, clustering, 
 visualization, and marker gene identification. Such analyses are widely used 
