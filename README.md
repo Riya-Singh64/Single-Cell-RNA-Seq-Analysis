@@ -84,22 +84,64 @@ In this project, the Leiden algorithm was used to identify cell clusters. The al
 2. Identification of communities using the Leiden algorithm  
 3. Assignment of cluster labels to each cell  
 
-### Example Code
+### Code
 
 ```python
 sc.pp.neighbors(adata)
 sc.tl.leiden(adata)
-
+```
 Visualization
 
-UMAP was used to visualize the clusters in two dimensions.
+1. UMAP Visualization
 
-Each point represents a single cell, and cells with similar gene expression profiles appear close together.
+UMAP (Uniform Manifold Approximation and Projection) was used to visualize the cell clusters in two dimensions. Each point
+
+represents a single cell, and cells with similar gene expression profiles appear closer together in the plot.
+
+### Code
+
+```python
+sc.tl.umap(adata)
+sc.pl.umap(adata, color="leiden")
+```
+2. Dot Plot of Marker Genes
+
+Dot plots were used to visualize the expression of marker genes across different clusters.
+
+The size of the dot represents the percentage of cells expressing the gene, while the color intensity indicates the average 
+
+expression level.
+
+### Code
+
+```python
+sc.pl.rank_genes_groups_dotplot(adata)
+```
+
+3. Heatmap of Marker Genes
+
+Heatmaps were used to display the expression patterns of top marker genes across different clusters. This helps identify 
+
+genes that are highly expressed in specific cell populations.
+
+### Code
+
+```python
+sc.pl.rank_genes_groups_heatmap(adata, n_genes=10)
+```
 
 Results
 
-The analysis successfully identified distinct cell clusters within the dataset. Differential gene expression analysis revealed marker genes associated with each cluster. These marker genes help characterize specific cell populations present in the tumor microenvironment.
+The analysis successfully identified distinct cell clusters within the dataset. Differential gene expression analysis 
+
+revealed marker genes associated with each cluster. These marker genes help characterize specific cell populations present 
+
+in the tumor microenvironment.
 
 Conclusion
 
-This project demonstrates a basic single-cell RNA sequencing analysis pipeline using Scanpy. The workflow includes quality control, normalization, clustering, visualization, and marker gene identification. Such analyses are widely used in cancer research to understand cellular heterogeneity and identify potential therapeutic targets.
+This project demonstrates a basic single-cell RNA sequencing analysis pipeline using Scanpy. The workflow includes quality
+
+control, normalization, clustering, visualization, and marker gene identification. Such analyses are widely used in cancer
+
+research to understand cellular heterogeneity and identify potential therapeutic targets.
