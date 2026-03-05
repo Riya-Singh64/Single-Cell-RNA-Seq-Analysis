@@ -90,7 +90,7 @@ In this project, the Leiden algorithm was used to identify cell clusters. The al
 sc.pp.neighbors(adata)
 sc.tl.leiden(adata)
 ```
-Visualization
+## Visualization
 
 1. UMAP Visualization
 
@@ -130,7 +130,7 @@ genes that are highly expressed in specific cell populations.
 sc.pl.rank_genes_groups_heatmap(adata, n_genes=10)
 ```
 
-Results
+## Results
 
 The analysis successfully identified distinct cell clusters within the dataset. Differential gene expression analysis 
 
@@ -138,10 +138,10 @@ revealed marker genes associated with each cluster. These marker genes help char
 
 in the tumor microenvironment.
 
-Conclusion
+## Conclusion
 
-This project demonstrates a basic single-cell RNA sequencing analysis pipeline using Scanpy. The workflow includes quality
+This project demonstrates a basic single-cell RNA sequencing analysis pipeline using Scanpy. The workflow includes quality 
 
-control, normalization, clustering, visualization, and marker gene identification. Such analyses are widely used in cancer
+control, normalization, clustering, visualization, and marker gene identification. Such analyses are widely used in cancer 
 
 research to understand cellular heterogeneity and identify potential therapeutic targets.
