@@ -26,26 +26,20 @@ GSM6998337, GSM6998340
 Data format:
 10x Genomics filtered_feature_bc_matrix (.h5)
 
-3. Tools Used:
-Python
-Scanpy
-Anndata
-Pandas
-NumPy
-Matplotlib
+3. Tools Used: Python,Scanpy,Anndata,Pandas,NumPy,Matplotlib
 Main tool: Scanpy - Python toolkit for single cell analysis
 
 4. scRNA-seq Analysis Workflow:
-1. Data Loading
-2. Quality Control
-3. Normalization
-4. Highly Variable Gene Selection
-5. Dimensionality Reduction (PCA)
-6. Graph Construction
-7. Cell Clustering using Leiden Algorithm
-8. Visualization using UMAP
-9. Differential Gene Expression
-10. Marker Gene Identification
+Data Loading
+Quality Control
+Normalization
+Highly Variable Gene Selection
+Dimensionality Reduction (PCA)
+Graph Construction
+Cell Clustering using Leiden Algorithm
+Visualization using UMAP
+Differential Gene Expression
+Marker Gene Identification
 Algorithm used: Leiden clustering algorithm
 
 Cell Clustering using Leiden Algorithm:
